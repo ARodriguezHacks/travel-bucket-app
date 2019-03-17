@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-gem 'rails', '~> 5.2.0'
+gem 'rails', '~> 5.2', '>= 5.2.2.1'
 
 gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5.0'
@@ -21,7 +21,7 @@ group :production do
 end
 
 group :development do
-  gem 'sqlite3'
+  gem 'sqlite3', '~> 1.3.6'
 end
 
 group :development, :test do
@@ -49,3 +49,5 @@ gem 'bcrypt'
 gem 'figaro', '1.0'
 
 gem 'faker'
+
+gem "actionview", ">= 5.2.2.1"
