@@ -1,17 +1,19 @@
 require 'random_data'
+require 'faker'
 
 5.times do
+  user_name = Faker::TvShows::VentureBros.character
   User.create!(
-    name: RandomData.random_name,
+    name: user_name,
     email: RandomData.random_email,
     password: RandomData.random_sentence
   )
 end
 users = User.all
 
-15.times do
+10.times do
   Topic.create!(
-    name: RandomData.random_sentence,
+    name: Faker::TvShows::VentureBros.organization,
     description: RandomData.random_paragraph
   )
 end
@@ -35,7 +37,7 @@ posts = Post.all
   Comment.create!(
     user: users.sample,
     post: posts.sample,
-    body: RandomData.random_paragraph
+    body: Faker::TvShows::VentureBros.quote
   )
 end
 
