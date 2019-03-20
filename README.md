@@ -1,15 +1,15 @@
 # Bloccit
 
 ## Description
-Bloccit is a Reddit-clone, an app where users can post, vote on, share, and save links and comments. Users must sign up for the service in order to start contributing posts and comments with the app providing Standard and Premium memberships. Bloccit users will need to be able to create posts as well as comment on those posts. Bloccit users can also save posts as favorites listed on a separate Favorite table in ActiveRecord. 
+Bloccit is a Reddit-clone, an app where users can post, vote on, share, and save links and comments. Users must sign up for the service in order to start contributing posts and comments with the app providing Standard and Premium memberships. Bloccit users will need to be able to create posts as well as comment on those posts. Bloccit users can also save posts as favorites listed on a separate Favorite table in ActiveRecord.
 
 ## Usage
 
-## Technologies Used: 
+## Technologies Used:
 
-Ruby, Ruby on Rails, RSpec, Bootstrap 4, 
+Ruby, Ruby on Rails, RSpec, Bootstrap 4,
 
-`
+```
 class PostsController < ApplicationController
   before_action :require_sign_in, except: :show
 
@@ -37,5 +37,4 @@ class PostsController < ApplicationController
       render :new
     end
   end
-`
-
+```
