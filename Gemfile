@@ -42,7 +42,7 @@ group :development, :test do
   gem 'factory_bot_rails'
 end
 
-gem 'bootstrap', '~> 4.1.3'
+gem 'bootstrap', '>= 4.3.1'
 
 gem 'bcrypt'
 
