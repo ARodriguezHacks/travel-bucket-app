@@ -42,7 +42,7 @@ group :development, :test do
   gem 'factory_bot_rails'
 end
 
-gem 'bootstrap-sass'
+gem 'bootstrap', '~> 4.1.3'
 
 gem 'bcrypt'
 
@@ -51,3 +51,7 @@ gem 'figaro', '1.0'
 gem 'faker'
 
 gem "actionview", ">= 5.2.2.1"
+
+gem 'popper_js', '~> 1.14.5'
+
+gem 'sprockets-rails', :require => 'sprockets/railtie'
