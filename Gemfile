@@ -55,3 +55,5 @@ gem "actionview", ">= 5.2.2.1"
 gem 'popper_js', '~> 1.14.5'
 
 gem 'sprockets-rails', :require => 'sprockets/railtie'
+
+gem 'font-awesome-sass', '~> 5.8.1'

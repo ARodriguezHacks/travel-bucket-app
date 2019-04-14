@@ -1,6 +1,6 @@
 <div>
   <%= render partial: 'votes/voting', locals: { post: @post } %>
-  <h1>
+  <h1 class="ml-4">
     <%= @post.title %> <br>
     <small>
       submitted <%= time_ago_in_words(@post.created_at) %> ago by <%= @post.user.name %>
@@ -28,10 +28,10 @@
     <h3>
       <%= pluralize(@post.points, 'point') %>
       <div>
-        <small>
-          <%= pluralize(@post.up_votes, 'up vote') %>
+        <h6>
+          <%= pluralize(@post.up_votes, 'up vote') %> <br />
           <%= pluralize(@post.down_votes, 'down vote') %>
-        </small>
+        </h6>
       </div>
     </h3>
     <% if current_user %>
