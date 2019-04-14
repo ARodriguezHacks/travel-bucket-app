@@ -13,19 +13,33 @@
   <body>
 
     <div class="container">
-      <ul class="nav nav-tabs">
-        <li><%= link_to "Bloccit", root_path %></li>
-        <li><%= link_to "Topics", topics_path %></li>
-        <li><%= link_to "About", about_path %></li>
-        <% if current_user %>
-          <li class="pull-right"><%= link_to "Sign Out", session_path(current_user), method: :delete %></li>
-          <li class="pull-right gravatar"><%= image_tag current_user.avatar_url(48) %></li>
-          <li class="pull-right"><%= link_to current_user.name, user_path(current_user) %></li>
-        <% else %>
-          <li class="pull-right"><%= link_to "Sign In", new_session_path %></li>
-          <li class="pull-right"><%= link_to "Sign Up", new_user_path %></li>
-        <% end %>
-      </ul>
+      <nav class="navbar navbar-expand-xl navbar-light bg-light">
+        <%= link_to "Bloccit", root_path, :class => "navbar-brand text-dark font-weight-bold" %>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav m-auto">
+            <li class="nav-item"><%= link_to "Topics", topics_path, :class => "nav-link pr-5" %></li>
+            <li class="nav-item"><%= link_to "About", about_path, :class => "nav-link pr-5" %></li>
+          </ul>
+            <ul class="list-unstyled">
+            <% if current_user %>
+              <li class="nav-item"><%= image_tag current_user.avatar_url(48), :class => "gravatar" %></li>
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle p-0" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><%= current_user.name %></a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <%= link_to "Sign Out", session_path(current_user), method: :delete, :class => "dropdown-item" %>
+                  <%= link_to "Profile", user_path(current_user), :class => "dropdown-item" %>
+                </div>
+              </li>
+            <% else %>
+              <li class="nav-item"><%= link_to "Sign In", new_session_path, :class => "nav-link" %></li>
+              <li class="nav-item"><%= link_to "Sign Up", new_user_path, :class => "nav-link" %></li>
+            <% end %>
+            </ul>
+          </div>
+      </nav>
 
       <% if flash[:notice] %>
         <div class="alert alert-success">
