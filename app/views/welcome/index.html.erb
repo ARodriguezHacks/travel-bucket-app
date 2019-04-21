@@ -1,11 +1,11 @@
 <div class="jumbotron">
-  <h1>Bloccit</h1>
+  <h1>TravelBucket</h1>
   <% if current_user %>
     <p>Welcome <strong><%= current_user.name %>!</strong></p>
-    <p>Bloccit is a resource for sharing links with your friends!</p>
+    <p>TravelBucket is the resource for sharing travel, leisure and globetrotting links with your friends!</p>
   <% else %>
     <div>
-      <p>Bloccit is a resource for sharing links with your friends!</p>
+      <p>TravelBucket is the resource for sharing travel, leisure and globetrotting links with your friends!</p>
       <%= link_to "Sign In", new_session_path %> or
       <%= link_to "Sign Up", new_user_path, class: 'btn btn-primary' %> today!
     </div>
@@ -14,14 +14,18 @@
 <div class="row">
   <div class="col-md-4 bg-dark text-white">
     <h2>Featured Topics</h2>
-    <p>Bloccit will deliver food and water to those in need, all over the world.</p>
+    <p>TravelBucket will deliver food and water to those in need, all over the world.</p>
   </div>
   <div class="col-md-4">
-    <h2>Your Favorites</h2>
-    <p>Bloccit will deliver money and education to those in need, all over the world.</p>
+    <% if current_user %>
+      <h2>Your Favorites</h2>
+    <% else %>
+      <h2>Top Posts</h2>
+    <% end %>
+    <p>TravelBucket will deliver money and education to those in need, all over the world.</p>
   </div>
   <div class="col-md-4 bg-dark text-white">
-    <h2>Your Recent Activity</h2>
-    <p>Bloccit will make you better looking: it's scientifically proven to make men look like Ryan Gosling and women look like Shakira.</p>
+    <h2>Recent Activity</h2>
+    <p>TravelBucket will make you better looking: it's scientifically proven to make men look like Ryan Gosling and women look like Shakira.</p>
   </div>
 </div>
