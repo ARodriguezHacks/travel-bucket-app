@@ -1,13 +1,23 @@
-# Bloccit
+# TravelBucket
+
+View working demo here: https://travelbucketapp.herokuapp.com/
 
 ## Description
-Bloccit is a Reddit-clone, an app where users can post, vote on, share, and save links and comments. Users must sign up for the service in order to start contributing posts and comments with the app providing Standard and Premium memberships. Bloccit users will need to be able to create posts as well as comment on those posts. Bloccit users can also save posts as favorites listed on a separate Favorite table in ActiveRecord.
-
-## Usage
+TravelBucket is the travel enthusiast's go-to app. Users can post, vote on, and save links and comments. Users must sign up for the service in order to start contributing posts and comments with the app providing Standard and Premium memberships. TravelBucket users will need to be able to create posts as well as comment on those posts. TravelBucket users can also save posts as favorites listed on a separate Favorite table in ActiveRecord.
 
 ## Technologies Used:
 
-Ruby, Ruby on Rails, RSpec, Bootstrap 4,
+Ruby, Ruby on Rails, RSpec, Bootstrap 4
+
+## Getting Started
+
+# Installing
+
+Make sure you have installed Ruby and Ruby on Rails:
+
+`git clone git@github.com/ARodriguezHacks/travel-bucket-app.git` or create a fork.
+
+## Usage
 
 ```
 class PostsController < ApplicationController
@@ -38,3 +48,13 @@ class PostsController < ApplicationController
     end
   end
 ```
+
+## Screenshots
+
+![Travel Bucket Landing Page](app/assets/images/travelbucketapptopics.png)
+
+![Travel Bucket Landing Page](app/assets/images/travelbucketnewpost.png)
+
+![Travel Bucket Landing Page](app/assets/images/travelbucketapppost.png)
+
+![Travel Bucket Landing Page](app/assets/images/travelappabout.png)
