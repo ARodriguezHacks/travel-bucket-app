@@ -51,10 +51,10 @@ class PostsController < ApplicationController
 
 ## Screenshots
 
-![Travel Bucket Landing Page](app/assets/images/travelbucketapptopics.png)
+![Travel Bucket Landing Page](app/assets/images/travelbucketlanding.png)
 
-![Travel Bucket Landing Page](app/assets/images/travelbucketnewpost.png)
+![Travel Bucket About Page](app/assets/images/travelbucketabout.png)
 
-![Travel Bucket Landing Page](app/assets/images/travelbucketapppost.png)
+![Travel Bucket Topic Page](app/assets/images/travelbuckettopic.png)
 
-![Travel Bucket Landing Page](app/assets/images/travelappabout.png)
+![Travel Bucket Post Page](app/assets/images/travelbucketpost.png)
