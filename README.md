@@ -13,7 +13,7 @@ Ruby, Ruby on Rails, RSpec, Bootstrap 4
 
 # Installing
 
-Make sure you have installed Ruby and Ruby on Rails:
+Make sure you have installed Ruby and Ruby on Rails
 
 `git clone git@github.com/ARodriguezHacks/travel-bucket-app.git` or create a fork.
 
