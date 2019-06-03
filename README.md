@@ -13,11 +13,53 @@ You can view a working demo on Heroku: https://travelbucketapp.herokuapp.com/
 
 ## Installing
 
-Make sure you have installed Ruby and Ruby on Rails
+Make sure you have Ruby and Ruby on Rails installed before getting your development environment running.
 
-`git clone git@github.com/ARodriguezHacks/travel-bucket-app.git` or create a fork.
+If you have a Mac, Ruby should already be installed but you can check by typing in your terminal/command line `ruby -v` to check if you Ruby installed and its version:
 
-![TravelBucket Comment Video](https://media.giphy.com/media/2uIlk7Mm7jcZhgrCm8/giphy.gif)
+`$ ruby -v`
+
+The same goes for Rails:
+
+`$ rails -v`
+
+If nothing comes up, here are some excellent guides for installing Ruby and Ruby on Rails:
+
+https://www.ruby-lang.org/en/documentation/installation/
+
+http://www.installrails.com/
+
+Once you have both Ruby and Rails installed on your local server, clone this respository
+
+`$ git clone git@github.com/ARodriguezHacks/travel-bucket-app.git`
+
+or
+
+`$ git clone https://github.com/ARodriguezHacks/travel-bucket-app.git your-preferred-name-for-project`
+
+Change directory (`cd`) into your newly cloned directory:
+
+`$ cd travel-bucket-app` or `$ cd your-preferred-name-for-project`
+
+Inside your project directory run `bundle install` to install the project's gems:
+
+`$ bundle install --without production`
+
+Create the project database
+
+`$ rails db:migrate`
+
+TravelBucket has a seed file with data readily available. If you want to populate your app with seed data run the following command:
+
+`$ rails db:seed`
+
+Now you're ready to run the rails server on your local machine
+
+`$ rails server`
+
+Navigate to http://localhost:3000/ on your browser and the TravelBucket landing page should appear:
+
+![Travel Bucket Landing Page](app/assets/images/travelbucketlanding.png)
 
 ## Technologies Used:
 
@@ -32,6 +74,9 @@ Make sure you have installed Ruby and Ruby on Rails
 * Ability to upvote and downvote on comments
 * A user profile page which outlines the user's created posts, comments, and favorites
 * User avatar generator through Gravatar (You must sign up for a Gravatar account for your avatar to appear)
+
+_Creating a comment on a post_<br />
+![TravelBucket Comment Video](https://media.giphy.com/media/2uIlk7Mm7jcZhgrCm8/giphy.gif)
 
 ## Sample Code
 
@@ -64,13 +109,14 @@ class User < ApplicationRecord
   
 ```
 
-## Screenshots
-
-![Travel Bucket Landing Page](app/assets/images/travelbucketlanding.png)
+## Additional Screenshots
 
 ![Travel Bucket Topic Page](app/assets/images/travelbuckettopic.png)
 
 ![Travel Bucket Post Page](app/assets/images/travelbucketpost.png)
+
+_Creating a new post_<>br /
+![Travel Bucket New Post](https://media.giphy.com/media/61Z6ss6cliGVXFg8QQ/giphy.gif)
 
 ## How to Contribute
 
