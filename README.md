@@ -115,7 +115,7 @@ class User < ApplicationRecord
 
 ![Travel Bucket Post Page](app/assets/images/travelbucketpost.png)
 
-_Creating a new post_<>br /
+_Creating a new post_</br>
 ![Travel Bucket New Post](https://media.giphy.com/media/61Z6ss6cliGVXFg8QQ/giphy.gif)
 
 ## How to Contribute
