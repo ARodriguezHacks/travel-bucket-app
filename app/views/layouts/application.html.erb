@@ -11,9 +11,7 @@
   </head>
 
   <body>
-
-    <div class="container">
-      <nav class="navbar navbar-expand-xl navbar-light bg-light sticky-top">
+      <nav class="navbar p-0 navbar-expand-xl bg-light">
         <%= link_to "TravelBucket", root_path, :class => "navbar-brand text-dark font-weight-bold" %>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -54,7 +52,6 @@
       <% end %>
 
       <%= yield %>
-    </div>
 
   </body>
 </html>

@@ -1,0 +1,10 @@
+<div class="media">
+  <div class="media-body">
+    <% top_topics = order_topics %>
+    <ul>
+      <% top_topics.each do |topic| %>
+        <li><%= link_to topic.name, topic_path(topic) %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
