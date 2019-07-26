@@ -2,10 +2,10 @@
 <div class="container">
   <h1>Topics</h1>
   <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-9">
       <% @topics.each do |topic| %>
         <div class="media">
-          <div class="media-body">
+          <div class="media-body border p-3 mb-3 shadow">
             <h4 class="media-heading">
               <%= link_to topic.name, topic %>
             </h4>
