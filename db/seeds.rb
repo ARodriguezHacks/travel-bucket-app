@@ -1,7 +1,7 @@
 require 'random_data'
 require 'faker'
 
-5.times do
+2.times do
   user_name = Faker::TvShows::VentureBros.character
   User.create!(
     name: user_name,

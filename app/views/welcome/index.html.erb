@@ -1,18 +1,24 @@
-<div class="container">
+<%= image_tag("background-beach-daylight-hero.jpg", class: 'img-fluid', alt: "Travel About Image 1") %>
+
+<div>
   <div>
-      <h1>TravelBucket</h1>
+    <h1>TravelBucket</h1>
     <% if current_user %>
       <p>Welcome back <strong><%= current_user.name %>!</strong></p>
     <% else %>
+      <p>Welcome to TravelBucket!</p>
+    <% end %>
+  </div>
+</div>
+<div class="container">
+  <div>
       <div container-hero">
-        <%= image_tag("hero-img-min.jpg", class: 'img-fluid', alt: "Travel About Image 1") %>
-        <div class="centered">
+        <div>
           <p>TravelBucket is the resource for sharing travel, leisure and globetrotting links with your friends!</p>
           <%= link_to "Sign In", new_session_path %> or
           <%= link_to "Sign Up", new_user_path, class: 'btn btn-primary' %> today!
         </div>
       </div>
-    <% end %>
   </div>
   <div class="row">
     <div class="col-md-4 bg-dark text-white">
@@ -33,4 +39,5 @@
       <p>TravelBucket will make you better looking: it's scientifically proven to make men look like Ryan Gosling and women look like Shakira.</p>
     </div>
   </div>
+</div>
 </div>
