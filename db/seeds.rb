@@ -6,7 +6,9 @@ require 'faker'
   User.create!(
     name: user_name,
     email: RandomData.random_email,
-    password: RandomData.random_sentence
+    password: RandomData.random_sentence,
+    activated: true,
+    activated_at: Time.zone.now
   )
 end
 users = User.all
@@ -45,13 +47,17 @@ admin = User.create!(
   name: 'Admin User',
   email: 'admin@example.com',
   password: 'helloworld',
-  role: 'admin'
+  role: 'admin',
+  activated: true,
+  activated_at: Time.zone.now
 )
 
 member = User.create!(
   name: 'Member User',
   email: 'member@example.com',
-  password: 'helloworld'
+  password: 'helloworld',
+  activated: true,
+  activated_at: Time.zone.now
 )
 
 puts "Seed finished"

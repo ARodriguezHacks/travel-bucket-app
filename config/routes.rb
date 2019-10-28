@@ -15,6 +15,8 @@ Rails.application.routes.draw do
 
   resources :sessions, only: [:new, :create, :destroy]
 
+  resources :account_activations, only: [:edit]
+
   get 'about' => 'welcome#about'
 
   root 'welcome#index'
