@@ -11,9 +11,12 @@ class UsersController < ApplicationController
     @user.password_confirmation = params[:user][:password_confirmation]
 
     if @user.save
-      flash[:notice] = "Welcome to TravelBucket #{@user.name}!"
-      create_session(@user)
-      redirect_to root_path
+      @user.send_activation_email
+      flash[:info] = "Please check your email to activate your account."
+      redirect_to root_url
+      #flash[:notice] = "Welcome to TravelBucket #{@user.name}!"
+      #create_session(@user)
+      #edirect_to root_path
     else
       flash.now[:alert] = "There was an error creating your account. Please try again."
       render :new
