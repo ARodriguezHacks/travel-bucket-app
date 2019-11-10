@@ -12,8 +12,17 @@ gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 
-
 gem 'bootsnap', '>= 1.1.0', require: false
+
+gem 'bootstrap', '>= 4.3.1'
+gem 'bcrypt'
+gem 'figaro', '1.0'
+gem 'faker'
+gem "actionview", ">= 5.2.2.1"
+gem 'popper_js', '~> 1.14.5'
+gem 'sprockets-rails', :require => 'sprockets/railtie'
+gem 'font-awesome-sass', '~> 5.8.1'
+gem "loofah", ">= 2.3.1"
 
 group :production do
   gem 'pg'
@@ -41,19 +50,3 @@ group :development, :test do
   gem 'shoulda'
   gem 'factory_bot_rails'
 end
-
-gem 'bootstrap', '>= 4.3.1'
-
-gem 'bcrypt'
-
-gem 'figaro', '1.0'
-
-gem 'faker'
-
-gem "actionview", ">= 5.2.2.1"
-
-gem 'popper_js', '~> 1.14.5'
-
-gem 'sprockets-rails', :require => 'sprockets/railtie'
-
-gem 'font-awesome-sass', '~> 5.8.1'
