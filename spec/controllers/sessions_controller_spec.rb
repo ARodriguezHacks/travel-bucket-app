@@ -10,13 +10,14 @@ RSpec.describe SessionsController, type: :controller do
     end
   end
 
-  describe "POST sessions" do
+  describe "POST create" do
     it "returns http success" do
       post :create, params: { session: { email: my_user.email } }
       expect(response).to have_http_status(:success)
     end
 
     it "initializes a session" do
+      my_user.activate
       post :create, params: { session: { email: my_user.email, password: my_user.password } }
       expect(session[:user_id]).to eq my_user.id
     end
@@ -42,7 +43,7 @@ RSpec.describe SessionsController, type: :controller do
     end
   end
 
-  describe "DELETE sessions/id" do
+  describe "DELETE destroy" do
     it "renders the #welcome view" do
       delete :destroy, params: { id: my_user.id }
       expect(response).to redirect_to root_path
