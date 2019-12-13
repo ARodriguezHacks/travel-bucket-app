@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_28_055320) do
+ActiveRecord::Schema.define(version: 2019_12_12_092305) do
 
   create_table "comments", force: :cascade do |t|
     t.text "body"
@@ -62,6 +62,8 @@ ActiveRecord::Schema.define(version: 2019_10_28_055320) do
     t.boolean "activated", default: false
     t.datetime "activated_at"
     t.string "remember_digest"
+    t.string "reset_digest"
+    t.datetime "reset_sent_at"
   end
 
   create_table "votes", force: :cascade do |t|
