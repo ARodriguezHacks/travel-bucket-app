@@ -1,9 +1,9 @@
 <div class="media">
   <div class="media-body">
     <% top_topics = order_topics %>
-    <ul>
+    <ul class="list-unstyled">
       <% top_topics.each do |topic| %>
-        <li><%= link_to topic.name, topic_path(topic) %></li>
+        <li><%= link_to topic.name, topic_path(topic), :class => 'trending-topics' %></li>
       <% end %>
     </ul>
   </div>

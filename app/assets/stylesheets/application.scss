@@ -1,15 +1,71 @@
-$body-bg: #e2e2e2;
 
 $theme-colors: (
-  "primary": #FF304F,
+  "primary": rgb(236, 89, 111),
   "secondary": #CACACA,
-  "success": #015668,
-  "info": #0F81C7,
-  "warning": #0DE2EA,
-  "danger": #06648C,
+  "success": #25ec89,
+  "info": #0DE2EA,
+  "warning": rgb(230, 234, 13),
+  "danger": rgb(182, 25, 25),
   "light": #ececec,
   "dark": #222222
 );
+
+body {
+  position: relative;
+  min-height: 100vh;
+}
+
+footer {
+  padding: 3rem;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+}
+
+.trending-topics {
+  font-size: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+.recent-posts {
+  box-shadow: 0px 0px 10px blue;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+}
+
+.section {
+  padding: 5rem;
+}
+
+.img-1, .img-2 {
+  width: 50%;
+}
+
+.img-3 {
+  width: 50%;
+}
+
+.hero-section {
+  position: relative;
+}
+
+.hero-image {
+  position: relative;
+}
+
+.hero-text {
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  text-align: center;
+  transform: translate(-50px, 10px);
+  width: 30rem;
+}
+
+.hero-text h3 {
+  color: #fef9fa;
+  text-shadow: 0px 0px 2px;
+}
 
 @import "bootstrap";
 @import "bootstrap-grid";

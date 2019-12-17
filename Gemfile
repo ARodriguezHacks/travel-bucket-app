@@ -14,7 +14,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'bootsnap', '>= 1.1.0', require: false
 
-gem 'bootstrap', '>= 4.3.1'
+gem 'bootstrap', '~> 4.4', '>= 4.4.1'
 gem 'bcrypt'
 gem 'figaro', '1.0'
 gem 'faker'

@@ -43,13 +43,13 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (9.0.0)
-    autoprefixer-rails (9.7.1)
+    autoprefixer-rails (9.7.3)
       execjs
     bcrypt (3.1.13)
     bindex (0.8.1)
     bootsnap (1.4.5)
       msgpack (~> 1.0)
-    bootstrap (4.3.1)
+    bootstrap (4.4.1)
       autoprefixer-rails (>= 9.1.0)
       popper_js (>= 1.14.3, < 2)
       sassc-rails (>= 2.0.0)
@@ -234,7 +234,7 @@ DEPENDENCIES
   actionview (>= 5.2.2.1)
   bcrypt
   bootsnap (>= 1.1.0)
-  bootstrap (>= 4.3.1)
+  bootstrap (~> 4.4, >= 4.4.1)
   byebug
   coffee-rails (~> 4.2)
   factory_bot_rails

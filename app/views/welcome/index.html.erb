@@ -1,43 +1,49 @@
-<%= image_tag("background-beach-daylight-hero.jpg", class: 'img-fluid', alt: "Travel About Image 1") %>
-
-<div>
-  <div>
-    <h1>TravelBucket</h1>
-    <% if current_user %>
-      <p>Welcome back <strong><%= current_user.name %>!</strong></p>
-    <% else %>
-      <p>Welcome to TravelBucket!</p>
-    <% end %>
-  </div>
-</div>
-<div class="container">
-  <div>
-      <div container-hero">
-        <div>
-          <p>TravelBucket is the resource for sharing travel, leisure and globetrotting links with your friends!</p>
-          <%= link_to "Sign In", new_session_path %> or
-          <%= link_to "Sign Up", new_user_path, class: 'btn btn-primary' %> today!
+<div class="container-fluid mt-4">
+  <% if current_user %>
+    <div class="row">
+      <div class="col-sm-3 mx-2 bg-dark text-white">
+        <h2>Trending Topics</h2>
+        <%= render partial: 'topics/topic', locals: { topic: @topic } %>
+      </div>
+      <div class="col-sm mx-2">
+          <h2>Recent Posts</h2>
+          <%= render current_user.posts.limit(3) %>
+      </div>
+      <div class="col-sm-3 mx-2 bg-light">
+        <h2>Recent Activity</h2>
+        <p>TravelBucket will make you better looking: it's scientifically proven to make men look like Ryan Gosling and women look like Shakira.</p>
+      </div>
+    </div>
+  <% else %>
+      <div class="d-none d-sm-block">
+        <div class="hero-section row">
+          <%= image_tag('background-beach-starfish-hero-min.png', class: 'hero-image img-fluid', alt: 'TravelBucket-hero')%>
+          <div class="hero-text">
+            <h3>Travel, Excursion, Adventure. Find your people, share your stories</h3>
+          </div>
         </div>
       </div>
-  </div>
-  <div class="row">
-    <div class="col-md-4 bg-dark text-white">
-      <h2>Trending Topics</h2>
-      <%= render partial: 'topics/topic', locals: { topic: @topic } %>
-    </div>
-    <div class="col-md-4">
-      <% if current_user %>
-        <h2>Recent Posts</h2>
-        <%= render current_user.posts.limit(3) %>
-      <% else %>
-        <h2>Top Posts</h2>
-      <% end %>
-      <p>TravelBucket will deliver money and education to those in need, all over the world.</p>
-    </div>
-    <div class="col-md-4 bg-dark text-white">
-      <h2>Recent Activity</h2>
-      <p>TravelBucket will make you better looking: it's scientifically proven to make men look like Ryan Gosling and women look like Shakira.</p>
-    </div>
-  </div>
-</div>
+      <div class="row p-3">
+        <div class="col">
+          <%= image_tag("image-test-2-min.jpg", class: 'img-fluid', alt: "TravelBucket Stock Image 1") %>
+        </div>
+        <div class="col">
+          <h5>TravelBucket is your online community for sharing images and posts to inspire your next adventure.</h5>
+        </div>
+      </div>
+      <div class="row p-3">
+        <div class="d-flex w-100">
+          <div class="flex-grow-1 align-self-md-center align-self-lg-start pt-lg-5 pl-lg-5">
+            <h5>Create posts and comment on others</h5>
+          </div>
+          <%= image_tag("travelbucket-new-post-min.png", class: 'img-2 img-fluid', alt: "TravelBucket Stock Image 1") %>
+        </div>
+      </div>
+      <div class="row p-3 mt-5 text-center">
+        <div class="w-100">
+            <h5>Save your Favorite Posts and Upvote/Downvote</h5>
+            <%= image_tag("favorites-votes-travelbucket-min.png", class: 'img-3 img-fluid', alt: "TravelBucket Stock Image 1") %>
+        </div>
+      </div>
+  <% end %>
 </div>
