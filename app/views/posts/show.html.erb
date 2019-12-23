@@ -3,13 +3,18 @@
     <%= render partial: 'votes/voting', locals: { post: @post } %>
     <h1>
       <%= @post.title %> <br>
+    </h1>
       <small>
         submitted <%= time_ago_in_words(@post.created_at) %> ago by <%= @post.user.name %>
       </small>
-    </h1>
   </div>
   <div class="row">
     <div class="col-md-8">
+    <% if @post.image.attached? %>
+        <div class="post-image">
+          <%= image_tag(@post.image, class: 'img-fluid') %>
+        </div>
+    <% end %>
       <p><%= @post.body %></p>
       <div>
         <h3>Comments</h3>

@@ -14,6 +14,11 @@
         <div class="media">
           <%= render partial: 'votes/voting', locals: { post: post } %>
           <div class="media-body border p-3 mb-3 shadow">
+            <% if post.image.attached? %>
+              <div class="topic-post-image">
+                <%= image_tag(post.image, class: 'img-fluid') %>
+              </div>
+            <% end %>
             <h4 class="media-heading">
               <%= link_to post.title, topic_post_path(@topic, post) %>
             </h4>
