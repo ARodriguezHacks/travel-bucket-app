@@ -12,6 +12,7 @@
       <div class="col-sm-3 mx-2 bg-light">
         <h2>Recent Activity</h2>
         <p>TravelBucket will make you better looking: it's scientifically proven to make men look like Ryan Gosling and women look like Shakira.</p>
+         <%= render partial: 'users/feed',  locals: { user: @user } %>
       </div>
     </div>
   <% else %>

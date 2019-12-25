@@ -11,9 +11,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
-
 gem 'bootsnap', '>= 1.1.0', require: false
-
 gem 'bootstrap', '~> 4.4', '>= 4.4.1'
 gem 'bcrypt'
 gem 'figaro', '1.0'
@@ -23,6 +21,7 @@ gem 'popper_js', '~> 1.14.5'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
 gem 'font-awesome-sass', '~> 5.8.1'
 gem "loofah", ">= 2.3.1"
+gem "rack", ">= 2.0.8"
 
 group :production do
   gem 'pg'

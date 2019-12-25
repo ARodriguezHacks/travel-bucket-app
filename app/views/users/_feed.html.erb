@@ -1,0 +1,10 @@
+<div class="media">
+  <div class="media-body">
+    <% user_comments = activity_feed %>
+    <ul class="list-unstyled">
+      <% user_comments.each do |comment| %>
+        <li><%= link_to comment.body, topic_post_path(comment.post.topic, comment.post) %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
