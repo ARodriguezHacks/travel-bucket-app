@@ -11,16 +11,16 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-light p-0 navbar-expand-xl">
-      <%= link_to "TravelBucket", root_path, :class => "navbar-brand font-weight-bold ml-3" %>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar p-0 navbar-expand-xl">
+      <%= link_to "TravelBucket", root_path, :class => "navbar-brand logo font-weight-bold ml-3" %>
+      <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav m-auto">
-          <li class="nav-item"><%= link_to "Topics", topics_path, :class => "nav-link pr-5" %></li>
-          <li class="nav-item"><%= link_to "About", about_path, :class => "nav-link pr-5" %></li>
+          <li class="nav-item"><%= link_to "Topics", topics_path, :class => "link-color nav-link pr-5" %></li>
+          <li class="nav-item"><%= link_to "About", about_path, :class => "link-color nav-link pr-5" %></li>
         </ul>
 
         <% if current_user %>

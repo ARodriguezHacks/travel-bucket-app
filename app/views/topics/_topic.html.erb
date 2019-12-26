@@ -1,10 +1,10 @@
 <div class="media">
   <div class="media-body">
     <% top_topics = order_topics %>
-    <ul class="list-unstyled">
       <% top_topics.each do |topic| %>
-        <li><%= link_to topic.name, topic_path(topic), :class => 'trending-topics' %></li>
+        <div class="p-3">
+          <h4 class="media-heading"><%= link_to topic.name, topic_path(topic) %></h4>
+        </div>
       <% end %>
-    </ul>
   </div>
 </div>

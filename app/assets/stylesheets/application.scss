@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif&display=swap');
+
 $theme-colors: (
-  "primary": rgb(236, 89, 111),
+  "primary": #ec596f,
   "secondary": #CACACA,
   "success": #25ec89,
   "info": #0DE2EA,
@@ -11,6 +13,8 @@ $theme-colors: (
 
 $navbar-brand-font-size: 2.5rem;
 
+$link-color: #ec9759;
+
 body {
   position: relative;
   min-height: 100vh;
@@ -21,6 +25,16 @@ footer {
   position: absolute;
   top: 100%;
   width: 100%;
+  background-color: salmon;
+}
+
+.link-color {
+  color:#000;
+  font-size: 20px;
+}
+
+.link-color:hover {
+  color:hsl(175, 72%, 49%);
 }
 
 .trending-topics {
@@ -29,7 +43,7 @@ footer {
 }
 
 .recent-posts {
-  box-shadow: 0px 0px 10px blue;
+  box-shadow: 0px 0px 5px rgb(192, 189, 189);
   margin-top: 0.5rem;
   padding: 0.5rem;
 }
@@ -38,8 +52,18 @@ footer {
   padding: 5rem;
 }
 
-.img-item {
-  width: 50%;
+.btn-background {
+  border-radius: 50px;
+  background-color:hsl(175, 72%, 49%)
+}
+
+.btn-background a:hover {
+  color: white;
+}
+
+.logo {
+  font-family:'Noto Serif', serif;
+  color: salmon;
 }
 
 .hero-section {
@@ -70,6 +94,22 @@ footer {
 
 .topic-post-image {
   width: 50%;
+}
+
+@media (max-width: 991px) {
+  .row-text-2 {
+    text-align: center;
+  }
+}
+
+@media (min-width: 992px) {
+  .img-item {
+    width: 50%;
+  }
+
+  .row-text-2 {
+    padding-left: 12rem;
+  }
 }
 
 @import "bootstrap";

@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-md-8">
-    <div class="media">
+    <div class="media ml-4">
       <br />
       <% avatar_url = @user.avatar_url(128) %>
       <% if avatar_url %>
@@ -20,23 +20,33 @@
   </div>
 </div>
 
-<h2>Posts</h2>
-<%= render @user.posts %>
+<div class="container">
+  <div class="row">
+    <div class="col-lg">
+      <h2>Posts</h2>
+      <%= render @user.posts %>
+    </div>
 
-<h2>Comments</h2>
-<%= render @user.comments %>
+    <div class="col-lg">
+      <h2>Comments</h2>
+      <%= render @user.comments %>
+    </div>
 
-<h2>Favorites</h2>
-<% @user.favorites.each do |favorite| %>
-  <div class="media">
-    <div class="media-body">
-      <h4 class="media-heading">
-        <%= link_to favorite.post.title, topic_post_path(favorite.post.topic, favorite.post) %>
-      </h4>
-      <small>
-        submitted <%= time_ago_in_words(favorite.post.created_at) %> ago by <%= favorite.post.user.name %> <br>
-        <%= favorite.post.comments.count %> Comments
-      </small>
+    <div class="col-lg">
+      <h2>Favorites</h2>
+      <% @user.favorites.each do |favorite| %>
+        <div class="media">
+          <div class="media-body">
+            <h4 class="media-heading">
+              <%= link_to favorite.post.title, topic_post_path(favorite.post.topic, favorite.post) %>
+            </h4>
+            <small>
+              submitted <%= time_ago_in_words(favorite.post.created_at) %> ago by <%= favorite.post.user.name %> <br>
+              <%= favorite.post.comments.count %> Comments
+            </small>
+          </div>
+        </div>
+      <% end %>
     </div>
   </div>
-<% end %>
+</div>

@@ -1,9 +1,23 @@
 <div class="media">
   <div class="media-body">
+    <h4>Comments</h4>
     <% user_comments = activity_feed %>
     <ul class="list-unstyled">
       <% user_comments.each do |comment| %>
-        <li><%= link_to comment.body, topic_post_path(comment.post.topic, comment.post) %></li>
+        <div class="card p-4 mb-2">
+          <h6>You recently commented on Post <strong><%= comment.post.title %></strong></h6>
+          <li><%= link_to comment.body, topic_post_path(comment.post.topic, comment.post) %></li>
+        </div>
+      <% end %>
+    </ul>
+    <h4>Voted</h4>
+    <% user_votes = vote_feed %>
+    <ul class="list-unstyled">
+      <% user_votes.each do |vote| %>
+        <div class="card p-4 mb-2">
+          <h6>You recently voted on Post <strong><%= vote.post.title %></strong></h6>
+          <li><%= link_to vote.post.body, topic_post_path(vote.post.topic, vote.post) %></li>
+        </div>
       <% end %>
     </ul>
   </div>
