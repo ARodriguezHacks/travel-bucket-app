@@ -1,9 +1,11 @@
 # TravelBucket
 
 ## Description
-TravelBucket is the travel enthusiast's social media app. Users can read and write posts, comment on fellow users' posts and keep the conversation going on all things travel. With so many social media apps out in the interwebs, sometimes it's refreshing to find a place where the topic never changes. Users must sign up for the service in order to start contributing posts and comments with the app providing Standard and Premium memberships. Users first start out as Standard members, but can become Premium members through invitation. Only Premium members can create new topics, but additional features abound for any casual user of TravelBucket.
+TravelBucket is the travel enthusiast's social media app. Users can read and write posts, upload images, comment on fellow users' posts and keep the conversation going on all things travel. With so many social media apps out in the interwebs, sometimes it's refreshing to find a place (or places) devoted to the same topic. 
 
-![Travel Bucket About Page](app/assets/images/travelbucketabout.png)
+Users must sign up to start contributing, with the app providing Standard and Premium memberships. Users first start out as Standard members, but can become Premium members through invitation. Only Premium and Admin members can create new topics, but additional features abound for any casual user of TravelBucket. 
+
+![Travel Bucket About Page](app/assets/images/tb-about-1-min.png)
 
 ## Viewing the Project
 
@@ -59,7 +61,7 @@ Now you're ready to run the rails server on your local machine
 
 Navigate to http://localhost:3000/ on your browser and the TravelBucket landing page should appear:
 
-![Travel Bucket Landing Page](app/assets/images/travelbucketlanding.png)
+![Travel Bucket Landing Page](app/assets/images/tb-landing-min.png)
 
 ## Technologies Used:
 
@@ -69,14 +71,15 @@ Navigate to http://localhost:3000/ on your browser and the TravelBucket landing 
 
 ## Features
 
-* Complete suite of CRUD actions for posts and comments (and topics for admin users)
+* Complete suite of CRUD actions for posts, images, and comments (and topics for admin users)
 * Ability to favorite posts
-* Ability to upvote and downvote on comments
+* Ability to upvote and downvote on posts
 * A user profile page which outlines the user's created posts, comments, and favorites
 * User avatar generator through Gravatar (You must sign up for a Gravatar account for your avatar to appear)
+* Password reset assistance
 
-_Creating a comment on a post_<br />
-![TravelBucket Comment Video](https://media.giphy.com/media/2uIlk7Mm7jcZhgrCm8/giphy.gif)
+_Successful log-in_ <br />
+![TravelBucket Comment Video](https://media.giphy.com/media/j0jjIYFiw29e7RdPdN/giphy.gif)
 
 ## Sample Code
 
@@ -111,12 +114,12 @@ class User < ApplicationRecord
 
 ## Additional Screenshots
 
-![Travel Bucket Topic Page](app/assets/images/travelbuckettopic.png)
+![Travel Bucket Topic Page](app/assets/images/tb-loggedin-min.png)
 
-![Travel Bucket Post Page](app/assets/images/travelbucketpost.png)
+![Travel Bucket Post Page](app/assets/images/tb-posts-min.png)
 
-_Creating a new post_</br>
-![Travel Bucket New Post](https://media.giphy.com/media/61Z6ss6cliGVXFg8QQ/giphy.gif)
+_Landing Page when logged out_</br>
+![Travel Bucket New Post](https://media.giphy.com/media/WOHiFlJvqOcacZghKT/giphy.gif)
 
 ## How to Contribute
 
