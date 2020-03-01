@@ -22,6 +22,7 @@ gem 'sprockets-rails', :require => 'sprockets/railtie'
 gem 'font-awesome-sass', '~> 5.8.1'
 gem "loofah", ">= 2.3.1"
 gem "rack", ">= 2.0.8"
+gem "nokogiri", ">= 1.10.8"
 
 group :production do
   gem 'pg'
